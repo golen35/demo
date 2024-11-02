@@ -29,10 +29,10 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Create the mini vm's code directory
-RUN mkdir -p /src/code
+RUN mkdir -p /code
 
 # Set the working directory to that same code directory
-WORKDIR ./src/code
+WORKDIR /code
 
 # Copy the requirements file into the container
 COPY requirements.txt /tmp/requirements.txt
